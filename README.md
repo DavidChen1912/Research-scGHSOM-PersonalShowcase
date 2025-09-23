@@ -1,77 +1,64 @@
-# scGHSOM
-scGHSOM: A Hierarchical Framework for Single-Cell Data Clustering and Visualization
+# Research-scGHSOM Personal Showcase
 
-### Prerequisites
---------------
-Currently running using the WSL terminal in VS Code.
-- Requires **JRE (Java Runtime Environment)**  
-- Python version **3.6 or higher**
+**scGHSOM: A Hierarchical Framework for Single-Cell Data Clustering and Visualization**
 
-### Data
---------------
-#### Sets
-- ./raw-data/Levine_13
-- ./raw-data/Levine_32
-- ./raw-data/CyTOF-Samusik
+---
 
-#### File Description
+## ⚠️ Disclaimer
+I am a **co-author of the scGHSOM project**, and this repository is **not the official implementation**.  
+This repository serves **solely as a personal demo for my Master’s program application**, highlighting my contributions as a co-author and contributor, while directing readers to the **official implementation and publication** for authoritative details.  
 
-- **`raw-data` (folder)**: Stores data to be clustered.  
-- **`raw-data/label` (folder)**: Stores labels for clustering data.  
-  - File names should have the same prefix as the data file, with `_label` appended.
-- **Input data** must be in **CSV format**.
-- **Columns**: Represent training attributes (all columns).  
-- **Rows**: Represent data to be clustered.  
-- Before starting clustering, **name the index column** (the index name must be passed in the command).
+- 🔗 Official repository: [changlabtw/scGHSOM](https://github.com/changlabtw/scGHSOM)  
+- 📄 Full paper available on *IEEE Xplore*: DOI [10.1109/TCBBIO.2025.3593632](https://doi.org/10.1109/TCBBIO.2025.3593632)  
+- © Copyright belongs to **Chang Lab (NCCU)**  
 
-### Usage
---------------
-Run the following commands in the terminal:
+All technical details, reproducibility materials, and the official source code remain under the authority of the original lab and can be accessed through the official channels linked above.
 
-```
-# for Levine_13
-python3 execute.py --index=Event --data=Levine_13dim_cleaned --tau1=0.06 --tau2=0.1
+---
 
-# for Levine_32
-python3 execute.py --index=Event --data=Levine_32dim_cleaned --tau1=0.1 --tau2=0.2
+## 🙏 Acknowledgements
+I would like to sincerely thank **Shang-Jung Wen** and **Prof. Jia-Ming Chang** for their guidance and leadership, which enabled me to **contribute and grow** throughout this project.
 
-# for CyTOF-Samusik
-python3 execute.py --index=Event --data=Samusik_01_cleaned --tau1=0.08 --tau2=0.2
-```
+---
 
-#### Notes:
-- **`data`** and **`index`** are mandatory parameters (ensure the index column is named and not empty).  
-- If **`tau1`** and **`tau2`** are not provided:  
-  - **`tau1`** defaults to **0.1**  
-  - **`tau2`** defaults to **0.01**
+## 📌 My Contributions
 
-#### Scripts:
+### 1. Pipeline Integration & Optimization
+Optimized and streamlined the **end-to-end single-cell clustering framework** of scGHSOM, transforming it into an automated analysis pipeline covering:
+- Data input  
+- Preprocessing  
+- Clustering  
+- Evaluation metrics  
 
-- **`execute.py`**: Runs all the process steps.  
-- **`format_ghsom_input_vector.py`**: Generates data in a format compatible with GHSOM.  
-- **`get_ghsom_dim.py`**: Retrieves the dimensions of the clustering results.  
-- **`save_cluster_with_clustered_label.py`**: Produces a data frame with clustering results (Leaf and each Layer) and saves it to the `data` folder.
+**Key scripts**:  
+- `programs/data_processing/format_ghsom_input_vector.py`  
+- `programs/data_processing/get_ghsom_dim.py`  
+- `programs/data_processing/save_cluster_with_cluster_label.py`  
+- `programs/evaluation/clustering_scores.py`  
+- `execute.py`  
+- `grid_runner.py`  
 
-#### Evaluation:
+---
 
-- **`evaluation/clustering_scores`**: Calculates **external** and **internal** evaluation scores.
+### 2. Visualization Enhancement
+Enhanced and extended visualization modules to improve interpretability of clustering results.  
 
-### Visualization
---------------
-Run the following commands in the terminal:
+**Key scripts**:  
+- `programs/Visualize/cluster_feature_map.py`  
+- `programs/Visualize/cluster_distribution_map.py`  
+- `programs/Visualize/generate_treemap.py`  
 
-```
-# Cluster Feature Map
-python3 programs/Visualize/cluster_feature_map.py --data=Samusik_01_cleaned --tau1=0.08 --tau2=0.2
+---
 
-# Cluster Distribution Map
-python3 programs/Visualize/cluster_distribution_map.py --data=Samusik_01_cleaned --tau1=0.08 --tau2=0.2
-```
+### 3. Empirical Evaluation on CYTOF Data
+Conducted parameter sweeps on **CYTOF datasets**, systematically analyzing clustering performance under different configurations and identifying performance trends.
 
-#### Notes:
-- **`data`**, **`tau1`**, and **`tau2`** should be set based on your dataset and analysis needs.
+---
 
-### References
---------------
-* [Online Tutorial](https://youtu.be/K1OWqli3CzU)
-* Shang-Jung Wen*, Jia-Ming Chang*, Fang Yu [scGHSOM: A Hierarchical Framework for Single-Cell Data Clustering and Visualization.](https://doi.org/10.48550/arXiv.2407.16984) arXiv:2407.16984 (2024). *joint-first author
+### 4. Benchmarking Against State-of-the-Art Methods
+Benchmarked scGHSOM against recent high-performing clustering methods (e.g., **KMD**, **Costal**) and evaluated both **clustering accuracy** and **runtime efficiency**, providing insights for further optimization.
+
+---
+
+
+
