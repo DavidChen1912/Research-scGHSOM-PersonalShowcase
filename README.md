@@ -6,7 +6,7 @@
 
 ## ⚠️ Disclaimer
 I am a **co-author of the scGHSOM project**, and this repository is **not the official implementation**.  
-This repository serves **solely as a personal demo for my Master’s program application**, highlighting my contributions as a co-author and contributor, while directing readers to the **official implementation and publication** for authoritative details.  
+This repository serves solely as a personal demo for my Master’s program application, highlighting my contributions as a co-author and contributor.
 
 - 🔗 Official repository: [changlabtw/scGHSOM](https://github.com/changlabtw/scGHSOM)  
 - 📄 Full paper available on *IEEE Xplore*: DOI [10.1109/TCBBIO.2025.3593632](https://doi.org/10.1109/TCBBIO.2025.3593632)  
