@@ -6,7 +6,7 @@
 
 ## ⚠️ Disclaimer
 I am a **co-author of the scGHSOM project**, and this repository is **not the official implementation**.  
-This repository serves solely as a personal demo for my Master’s program application, highlighting my contributions as a co-author and contributor.
+This repository serves solely as a personal demo for my **Master’s program application**, highlighting my contributions as a co-author and contributor.
 
 - 🔗 Official repository: [changlabtw/scGHSOM](https://github.com/changlabtw/scGHSOM)  
 - 📄 Full paper available on *IEEE Xplore*: DOI [10.1109/TCBBIO.2025.3593632](https://doi.org/10.1109/TCBBIO.2025.3593632)  
@@ -50,8 +50,8 @@ Enhanced and extended visualization modules to improve interpretability of clust
 
 ---
 
-### 3. Empirical Evaluation on CYTOF Data
-Conducted parameter sweeps on **CYTOF datasets**, systematically analyzing clustering performance under different configurations and identifying performance trends.
+### 3. Parameter Evaluation on CYTOF Data
+Evaluated scGHSOM on CYTOF datasets across different parameter settings, recording outcomes and identifying performance patterns.
 
 ---
 
